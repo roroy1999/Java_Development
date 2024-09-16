@@ -1,0 +1,18 @@
+package com.example.repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
+public class ExampleRepositoryImpl {
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    // Add custom repository methods if needed
+
+    @Transactional
+    public void customMethod() {
+        // Implement your custom logic here
+    }
+}

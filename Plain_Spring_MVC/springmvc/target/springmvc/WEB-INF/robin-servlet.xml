@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- Component scanning for Spring-managed beans -->
+    <context:component-scan base-package="com.robin" />
+
+    <!-- Enable annotation-based configuration -->
+    <context:annotation-config />
+    
+    <!-- View resolver for JSP pages -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- C3P0 DataSource Configuration -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/robin?useSSL=false" />
+        <property name="user" value="root" />
+        <property name="password" value="Robi642#" />
+
+        <!-- C3P0 specific properties -->
+        <property name="properties">
+            <props>
+                <prop key="minPoolSize">5</prop>
+                <prop key="maxPoolSize">20</prop>
+                <prop key="acquireIncrement">1</prop>
+                <prop key="maxStatements">50</prop>
+                <prop key="idleConnectionTestPeriod">300</prop> <!-- 5 minutes -->
+                <prop key="maxIdleTime">600</prop> <!-- 10 minutes -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- Hibernate SessionFactory Configuration -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.robin.model" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <!-- Removed unnecessary session context class property -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- Transaction Manager Configuration -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <!-- Enable transaction management -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>

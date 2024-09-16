@@ -1,0 +1,213 @@
+2024-08-24T17:06:26.338+05:30  INFO 25792 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Starting SpringmvcbootApplication using Java 18.0.1.1 with PID 25792 (C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot\target\classes started by Dell in C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot)
+2024-08-24T17:06:26.340+05:30  INFO 25792 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-08-24T17:06:26.891+05:30  INFO 25792 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-24T17:06:26.948+05:30  INFO 25792 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2024-08-24T17:06:27.569+05:30  INFO 25792 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-24T17:06:27.585+05:30  INFO 25792 --- [springmvcboot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-24T17:06:27.586+05:30  INFO 25792 --- [springmvcboot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-24T17:06:27.783+05:30  INFO 25792 --- [springmvcboot] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-08-24T17:06:27.789+05:30  INFO 25792 --- [springmvcboot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-24T17:06:27.789+05:30  INFO 25792 --- [springmvcboot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1408 ms
+2024-08-24T17:06:27.934+05:30  INFO 25792 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-24T17:06:28.328+05:30  INFO 25792 --- [springmvcboot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47569167
+2024-08-24T17:06:28.331+05:30  INFO 25792 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-24T17:06:28.378+05:30  INFO 25792 --- [springmvcboot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-24T17:06:28.490+05:30  INFO 25792 --- [springmvcboot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-24T17:06:28.553+05:30  INFO 25792 --- [springmvcboot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-24T17:06:28.937+05:30  INFO 25792 --- [springmvcboot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-24T17:06:29.027+05:30  WARN 25792 --- [springmvcboot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-24T17:06:29.854+05:30  INFO 25792 --- [springmvcboot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-24T17:06:29.857+05:30  INFO 25792 --- [springmvcboot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T17:06:30.082+05:30  INFO 25792 --- [springmvcboot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-24T17:06:30.476+05:30  WARN 25792 --- [springmvcboot] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-24T17:06:30.502+05:30  INFO 25792 --- [springmvcboot] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-24T17:06:30.826+05:30  INFO 25792 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-24T17:06:30.835+05:30  INFO 25792 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Started SpringmvcbootApplication in 4.877 seconds (process running for 5.411)
+2024-08-24T17:06:43.999+05:30  INFO 25792 --- [springmvcboot] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-24T17:06:43.999+05:30  INFO 25792 --- [springmvcboot] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-24T17:06:44.000+05:30  INFO 25792 --- [springmvcboot] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-24T17:06:44.032+05:30  INFO 25792 --- [springmvcboot] [http-nio-8082-exec-1] com.robin.springmvcboot.LoggingAspect    : getAlien method called
+2024-08-24T17:43:52.245+05:30  INFO 25792 --- [springmvcboot] [RMI TCP Connection(42)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-24T17:43:53.260+05:30  INFO 25792 --- [springmvcboot] [RMI TCP Connection(42)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T17:43:53.384+05:30  INFO 25792 --- [springmvcboot] [RMI TCP Connection(42)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-24T17:43:53.451+05:30  INFO 25792 --- [springmvcboot] [RMI TCP Connection(42)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-24T17:43:58.224+05:30  INFO 25080 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Starting SpringmvcbootApplication using Java 18.0.1.1 with PID 25080 (C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot\target\classes started by Dell in C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot)
+2024-08-24T17:43:58.226+05:30  INFO 25080 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-08-24T17:43:59.016+05:30  INFO 25080 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-24T17:43:59.102+05:30  INFO 25080 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+2024-08-24T17:44:00.294+05:30  INFO 25080 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-24T17:44:00.320+05:30  INFO 25080 --- [springmvcboot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-24T17:44:00.320+05:30  INFO 25080 --- [springmvcboot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-24T17:44:00.593+05:30  INFO 25080 --- [springmvcboot] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-08-24T17:44:00.598+05:30  INFO 25080 --- [springmvcboot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-24T17:44:00.599+05:30  INFO 25080 --- [springmvcboot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2328 ms
+2024-08-24T17:44:00.765+05:30  INFO 25080 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-24T17:44:01.543+05:30  INFO 25080 --- [springmvcboot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d7ceca8
+2024-08-24T17:44:01.548+05:30  INFO 25080 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-24T17:44:01.607+05:30  INFO 25080 --- [springmvcboot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-24T17:44:01.715+05:30  INFO 25080 --- [springmvcboot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-24T17:44:01.777+05:30  INFO 25080 --- [springmvcboot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-24T17:44:02.364+05:30  INFO 25080 --- [springmvcboot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-24T17:44:02.531+05:30  WARN 25080 --- [springmvcboot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-24T17:44:04.091+05:30  INFO 25080 --- [springmvcboot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-24T17:44:04.094+05:30  INFO 25080 --- [springmvcboot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T17:44:04.401+05:30  INFO 25080 --- [springmvcboot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-24T17:44:05.094+05:30  WARN 25080 --- [springmvcboot] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-24T17:44:05.126+05:30  INFO 25080 --- [springmvcboot] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-24T17:44:05.589+05:30  INFO 25080 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-24T17:44:05.606+05:30  INFO 25080 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Started SpringmvcbootApplication in 7.859 seconds (process running for 8.578)
+2024-08-24T17:44:16.270+05:30  INFO 25080 --- [springmvcboot] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-24T17:44:16.270+05:30  INFO 25080 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-24T17:44:16.272+05:30  INFO 25080 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-24T17:44:16.326+05:30  INFO 25080 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from aspect before
+2024-08-24T17:44:16.502+05:30  INFO 25080 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from Aspect After
+2024-08-24T18:29:13.379+05:30  INFO 25080 --- [springmvcboot] [RMI TCP Connection(48)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-24T18:29:13.487+05:30  INFO 25080 --- [springmvcboot] [RMI TCP Connection(48)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T18:29:13.507+05:30  INFO 25080 --- [springmvcboot] [RMI TCP Connection(48)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-24T18:29:13.514+05:30  INFO 25080 --- [springmvcboot] [RMI TCP Connection(48)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-24T18:29:17.289+05:30  INFO 19208 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Starting SpringmvcbootApplication using Java 18.0.1.1 with PID 19208 (C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot\target\classes started by Dell in C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot)
+2024-08-24T18:29:17.292+05:30  INFO 19208 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-08-24T18:29:17.984+05:30  INFO 19208 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-24T18:29:18.041+05:30  INFO 19208 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2024-08-24T18:29:18.726+05:30  INFO 19208 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-24T18:29:18.750+05:30  INFO 19208 --- [springmvcboot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-24T18:29:18.750+05:30  INFO 19208 --- [springmvcboot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-24T18:29:18.975+05:30  INFO 19208 --- [springmvcboot] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-08-24T18:29:18.980+05:30  INFO 19208 --- [springmvcboot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-24T18:29:18.981+05:30  INFO 19208 --- [springmvcboot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1626 ms
+2024-08-24T18:29:19.135+05:30  INFO 19208 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-24T18:29:19.617+05:30  INFO 19208 --- [springmvcboot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68e5c7ae
+2024-08-24T18:29:19.620+05:30  INFO 19208 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-24T18:29:19.678+05:30  INFO 19208 --- [springmvcboot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-24T18:29:19.784+05:30  INFO 19208 --- [springmvcboot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-24T18:29:19.842+05:30  INFO 19208 --- [springmvcboot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-24T18:29:20.687+05:30  INFO 19208 --- [springmvcboot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-24T18:29:20.883+05:30  WARN 19208 --- [springmvcboot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-24T18:29:21.855+05:30  INFO 19208 --- [springmvcboot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-24T18:29:21.859+05:30  INFO 19208 --- [springmvcboot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T18:29:22.123+05:30  INFO 19208 --- [springmvcboot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-24T18:29:22.574+05:30  WARN 19208 --- [springmvcboot] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-24T18:29:22.604+05:30  INFO 19208 --- [springmvcboot] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-24T18:29:22.943+05:30  INFO 19208 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-24T18:29:22.952+05:30  INFO 19208 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Started SpringmvcbootApplication in 6.223 seconds (process running for 7.176)
+2024-08-24T18:29:30.066+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-24T18:29:30.066+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-24T18:29:30.068+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-24T18:29:30.113+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from aspect before
+2024-08-24T18:29:30.114+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : got error
+2024-08-24T18:29:30.114+05:30  INFO 19208 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from Aspect After
+2024-08-24T18:29:30.117+05:30 ERROR 19208 --- [springmvcboot] [http-nio-8082-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ArithmeticException: / by zero] with root cause
+
+java.lang.ArithmeticException: / by zero
+	at com.robin.springmvcboot.SpringRestController.getAliens(SpringRestController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.11.jar:6.1.11]
+	at com.robin.springmvcboot.SpringRestController$$SpringCGLIB$$0.getAliens(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-24T18:39:57.346+05:30  INFO 19208 --- [springmvcboot] [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-24T18:39:57.388+05:30  INFO 19208 --- [springmvcboot] [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T18:39:57.391+05:30  INFO 19208 --- [springmvcboot] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-24T18:39:57.400+05:30  INFO 19208 --- [springmvcboot] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-24T18:40:00.965+05:30  INFO 19016 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Starting SpringmvcbootApplication using Java 18.0.1.1 with PID 19016 (C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot\target\classes started by Dell in C:\Users\Dell\OneDrive\Documents\Robin Git Repo\Spring_Boot_Project\springmvcboot)
+2024-08-24T18:40:00.967+05:30  INFO 19016 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-08-24T18:40:01.961+05:30  INFO 19016 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-24T18:40:02.014+05:30  INFO 19016 --- [springmvcboot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2024-08-24T18:40:02.923+05:30  INFO 19016 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-24T18:40:02.939+05:30  INFO 19016 --- [springmvcboot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-24T18:40:02.940+05:30  INFO 19016 --- [springmvcboot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-24T18:40:03.158+05:30  INFO 19016 --- [springmvcboot] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-08-24T18:40:03.164+05:30  INFO 19016 --- [springmvcboot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-24T18:40:03.165+05:30  INFO 19016 --- [springmvcboot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2148 ms
+2024-08-24T18:40:03.315+05:30  INFO 19016 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-24T18:40:03.714+05:30  INFO 19016 --- [springmvcboot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d1c933
+2024-08-24T18:40:03.717+05:30  INFO 19016 --- [springmvcboot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-24T18:40:03.770+05:30  INFO 19016 --- [springmvcboot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-24T18:40:03.897+05:30  INFO 19016 --- [springmvcboot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-24T18:40:03.957+05:30  INFO 19016 --- [springmvcboot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-24T18:40:04.413+05:30  INFO 19016 --- [springmvcboot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-24T18:40:04.514+05:30  WARN 19016 --- [springmvcboot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-24T18:40:05.495+05:30  INFO 19016 --- [springmvcboot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-24T18:40:05.497+05:30  INFO 19016 --- [springmvcboot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T18:40:05.731+05:30  INFO 19016 --- [springmvcboot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-24T18:40:06.170+05:30  WARN 19016 --- [springmvcboot] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-24T18:40:06.200+05:30  INFO 19016 --- [springmvcboot] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-24T18:40:06.621+05:30  INFO 19016 --- [springmvcboot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-24T18:40:06.631+05:30  INFO 19016 --- [springmvcboot] [main] c.r.s.SpringmvcbootApplication           : Started SpringmvcbootApplication in 6.275 seconds (process running for 6.896)
+2024-08-24T18:40:06.947+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-24T18:40:06.948+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-24T18:40:06.949+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-24T18:40:06.986+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from aspect before
+2024-08-24T18:40:07.133+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from Aspect Afterreturn
+2024-08-24T18:40:07.133+05:30  INFO 19016 --- [springmvcboot] [http-nio-8082-exec-2] com.robin.springmvcboot.LoggingAspect    : getAlien method called from Aspect After
+2024-08-24T19:29:01.740+05:30  INFO 19016 --- [springmvcboot] [RMI TCP Connection(51)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-24T19:29:01.821+05:30  INFO 19016 --- [springmvcboot] [RMI TCP Connection(51)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-24T19:29:01.825+05:30  INFO 19016 --- [springmvcboot] [RMI TCP Connection(51)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-24T19:29:01.832+05:30  INFO 19016 --- [springmvcboot] [RMI TCP Connection(51)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
