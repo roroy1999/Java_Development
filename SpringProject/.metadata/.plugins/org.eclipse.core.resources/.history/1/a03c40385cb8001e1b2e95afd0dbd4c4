@@ -1,8 +1,0 @@
-package com.example.repository;
-
-import com.example.model.ExampleEntity;
-
-public interface ExampleRepository {
-    void save(ExampleEntity entity);
-    ExampleEntity findById(Long id);
-}

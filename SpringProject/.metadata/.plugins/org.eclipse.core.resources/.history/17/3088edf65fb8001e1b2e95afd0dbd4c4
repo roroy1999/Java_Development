@@ -1,9 +1,0 @@
-package com.example.repository;
-
-import com.example.model.ExampleEntity;
-import org.springframework.data.repository.CrudRepository;
-
-public interface ExampleRepository extends CrudRepository<ExampleEntity, Long> {
-
-    // Add custom queries or methods if needed
-}

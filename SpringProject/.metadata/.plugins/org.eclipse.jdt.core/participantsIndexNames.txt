@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Dell\OneDrive\Documents\SpringProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1601183168.index
-\Simple_web_page\src\main\java

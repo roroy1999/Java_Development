@@ -1,5 +1,0 @@
-com\example\model\ExampleEntity.class
-com\example\controller\ExampleController.class
-com\example\config\HibernateConfig.class
-com\example\MainApplication.class
-com\example\repository\ExampleRepository.class
