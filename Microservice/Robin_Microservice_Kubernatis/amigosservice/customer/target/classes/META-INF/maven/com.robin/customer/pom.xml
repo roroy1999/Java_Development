@@ -33,6 +33,10 @@
 	    <artifactId>postgresql</artifactId>
 	    <scope>runtime</scope>
     </dependency>
+    <dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
     <!-- Update JUnit dependency if needed -->
     <dependency>
       <groupId>junit</groupId>
