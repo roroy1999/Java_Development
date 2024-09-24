@@ -1,5 +1,6 @@
 package com.robin.jobms.job;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -12,8 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
-//import com.robin.firstjobapp.company.Company;
+import com.robin.jobms.job.dto.JobWithCompanyDTO;
+import com.robin.jobms.job.external.*;
 
 @RestController
 @RequestMapping("/jobs")
@@ -26,7 +29,8 @@ public class JobController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Job>> findAll(){
+	public ResponseEntity<List<JobWithCompanyDTO>> findAll(){
+		//System.out.println("COMPANY : "+ company);
 		return ResponseEntity.ok(jobService.findAll());
 	}
 	

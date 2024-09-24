@@ -2,9 +2,11 @@ package com.robin.jobms.job;
 
 import java.util.List;
 
+import com.robin.jobms.job.dto.JobWithCompanyDTO;
+
 public interface JobService {
 	
-	List<Job> findAll();
+	List<JobWithCompanyDTO> findAll();
 	
 	void createJob(Job bob);
 
