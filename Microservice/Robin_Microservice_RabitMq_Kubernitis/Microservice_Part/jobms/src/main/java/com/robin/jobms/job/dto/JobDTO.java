@@ -1,9 +1,11 @@
 package com.robin.jobms.job.dto;
 
-import com.robin.jobms.job.Job;
-import com.robin.jobms.job.external.Company;
+import java.util.List;
 
-public class JobWithCompanyDTO {
+import com.robin.jobms.job.external.Company;
+import com.robin.jobms.job.external.Review;
+
+public class JobDTO {
 	private Long id;
 	private String title;
 	private String minSalary;
@@ -11,6 +13,14 @@ public class JobWithCompanyDTO {
 	private String location;
     private String description;
 	private Company company;
+	private List<Review> reviews;
+	
+	public List<Review> getReviews() {
+		return reviews;
+	}
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
 	public Long getId() {
 		return id;
 	}

@@ -1,32 +1,10 @@
-package com.robin.reviewms.review;
+package com.robin.jobms.job.external;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-
-@Entity
 public class Review {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String desciption;
 	private double rating;
-	private Long companyId;
-	
-	public Review() {
-	}
-	public Long getCompanyId() {
-		return companyId;
-	}
-	public void setCompanyId(Long companyId) {
-		this.companyId = companyId;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -51,7 +29,4 @@ public class Review {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	
-	
-
 }

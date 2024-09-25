@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.robin.jobms.job.dto.JobWithCompanyDTO;
+import com.robin.jobms.job.dto.JobDTO;
 import com.robin.jobms.job.external.*;
 
 @RestController
@@ -29,7 +29,7 @@ public class JobController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<JobWithCompanyDTO>> findAll(){
+	public ResponseEntity<List<JobDTO>> findAll(){
 		//System.out.println("COMPANY : "+ company);
 		return ResponseEntity.ok(jobService.findAll());
 	}
@@ -41,8 +41,8 @@ public class JobController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<JobWithCompanyDTO> getJobById(@PathVariable Long id) {
-		JobWithCompanyDTO jobWithCompanyDTO = jobService.getJobById(id);
+	public ResponseEntity<JobDTO> getJobById(@PathVariable Long id) {
+		JobDTO jobWithCompanyDTO = jobService.getJobById(id);
 		if (jobWithCompanyDTO!=null) {
 			return new ResponseEntity<>(jobWithCompanyDTO, HttpStatus.OK);
 		}
