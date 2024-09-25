@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,12 +15,16 @@ import com.robin.jobms.job.JobRepository;
 import com.robin.jobms.job.JobService;
 import com.robin.jobms.job.dto.JobWithCompanyDTO;
 import com.robin.jobms.job.external.Company;
+import com.robin.jobms.job.mapper.JobMapper;
 
 @Service
 public class JobServiceImpl implements JobService{
 	
 	//private List<Job> jobs = new ArrayList<>();
 	JobRepository jobRepository;
+	
+	@Autowired
+	RestTemplate restTemplate;
 
 	public JobServiceImpl(JobRepository jobRepository) {
 		super();
@@ -30,18 +35,17 @@ public class JobServiceImpl implements JobService{
 	public List<JobWithCompanyDTO> findAll() {
 		// TODO Auto-generated method stub
 		List<Job> jobs = jobRepository.findAll();
-		List<JobWithCompanyDTO> jobWithCompanyDTOs = new ArrayList<>();
+		//List<JobWithCompanyDTO> jobWithCompanyDTOs = new ArrayList<>();
 		
 		
 		return jobs.stream().map((job)->convertToDto(job)).collect(Collectors.toList());
 	}
 	
 	private JobWithCompanyDTO convertToDto(Job job) {
-		RestTemplate restTemplate = new RestTemplate();
-		JobWithCompanyDTO jobWithCompanyDTO = new JobWithCompanyDTO();
-		jobWithCompanyDTO.setJob(job);
-		Company company = restTemplate.getForObject("http://localhost:8083/companies/{companyId}",Company.class,job.getCompanyId());
-		jobWithCompanyDTO.setCompany(company);
+		//RestTemplate restTemplate = new RestTemplate();
+		
+		Company company = restTemplate.getForObject("http://COMPANY-SERVICE/companies/{companyId}",Company.class,job.getCompanyId());
+		JobWithCompanyDTO jobWithCompanyDTO = JobMapper.mapToJobWithCompanyDTO(job, company);
 		return jobWithCompanyDTO;
 	}
 
@@ -52,10 +56,11 @@ public class JobServiceImpl implements JobService{
 	}
 
 	@Override
-	public Job getJobById(Long id) {
+	public JobWithCompanyDTO getJobById(Long id) {
 		// TODO Auto-generated method stub
+		Job job =jobRepository.findById(id).orElse(new Job());
+		return convertToDto(job);
 		
-		return jobRepository.findById(id).orElse(new Job());
 	}
 
 	@Override
