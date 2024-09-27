@@ -1,13 +1,11 @@
 package com.robin.jobms.job.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,6 +19,10 @@ import com.robin.jobms.job.external.Company;
 import com.robin.jobms.job.external.Review;
 import com.robin.jobms.job.mapper.JobMapper;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
+
 @Service
 public class JobServiceImpl implements JobService{
 	
@@ -32,6 +34,8 @@ public class JobServiceImpl implements JobService{
 	
 	CompanyClient companyClient;
 	
+	int attempt = 0;
+	
 	ReviewClient reviewClient;
 
 	public JobServiceImpl(JobRepository jobRepository,CompanyClient companyClient,ReviewClient reviewClient) {
@@ -42,11 +46,21 @@ public class JobServiceImpl implements JobService{
 	}
 
 	@Override
+//	@CircuitBreaker(name="companyBreaker",fallbackMethod = "companyBreakerFallback")
+//	@Retry(name="companyBreaker",fallbackMethod = "companyBreakerFallback")
+	@RateLimiter(name="companyBreaker",fallbackMethod = "companyBreakerFallback")
 	public List<JobDTO> findAll() {
 		// TODO Auto-generated method stub
+		System.out.println("Attempt   :" + ++attempt);
 		List<Job> jobs = jobRepository.findAll();
 		//List<JobWithCompanyDTO> jobWithCompanyDTOs = new ArrayList<>();
 		return jobs.stream().map((job)->convertToDto(job)).collect(Collectors.toList());
+	}
+	
+	public List<String> companyBreakerFallback(Exception e){
+		List<String> list = new ArrayList<>();
+		list.add("Dummy");
+		return list;
 	}
 	
 	private JobDTO convertToDto(Job job) {
