@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Load the properties file file :sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency  -->
+    <!-- go to class whichs path you want and right click on the class name in code and press Copy Qualified name-->
+    <bean id="myFortune"
+        class="spring_Appication1.HappyFortuneService">
+    </bean>
+        
+    <bean id="myCoach" class="spring_Appication1.BaseballCauch">
+         <!-- set up constructor injection  -->
+         <constructor-arg ref="myFortune"></constructor-arg>
+    </bean>
+    
+    <bean id="myCricketCoach" class="spring_Appication1.CricketCoach">
+    <!-- Set up setter injection -->
+    <property name="fortuneService" ref="myFortune"></property>
+    
+    <!-- inject literal values -->
+    <property name="emailAddress" value="royrobin202@gmail"></property>
+    <property name="team" value="${foo.team}"></property><!-- from the above properties file -->
+    
+    </bean>
+</beans>
+
+
+
+
+
