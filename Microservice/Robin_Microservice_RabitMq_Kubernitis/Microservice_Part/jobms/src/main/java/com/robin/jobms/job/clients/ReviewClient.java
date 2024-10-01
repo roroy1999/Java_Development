@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.robin.jobms.job.external.Review;
 
-@FeignClient(name="REVIEW-SERVICE")
+@FeignClient(name="REVIEW-SERVICE",url = "${review-service.url}")
 public interface ReviewClient {
 	@GetMapping("/reviews")
 	List<Review> getReviews(@RequestParam("CompanyId") Long companyId);
