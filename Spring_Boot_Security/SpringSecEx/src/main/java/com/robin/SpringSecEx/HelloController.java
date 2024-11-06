@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestController
 public class HelloController {
 	
-	@GetMapping("/Home")
+	@GetMapping("/")
 	public String greet(HttpServletRequest e) {
 		return "Welcome to Agro"+e.getSession().getId();
 	}
