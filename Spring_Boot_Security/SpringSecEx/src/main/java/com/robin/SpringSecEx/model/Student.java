@@ -1,4 +1,4 @@
-package com.robin.SpringSecEx;
+package com.robin.SpringSecEx.model;
 
 public class Student {
 	private int id;
