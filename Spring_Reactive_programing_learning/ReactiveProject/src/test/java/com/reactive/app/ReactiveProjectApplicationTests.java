@@ -49,7 +49,21 @@ class ReactiveProjectApplicationTests {
 		learn.subscribe(data->{
 			System.out.println("data is "+ data);
 		});
-		System.out.println("Testing");
+		learn.subscribe(System.out::println);
+	}
+
+	@Test
+	void workingWithMonoUsingError(){
+		Mono<String> errorMono = Mono.error(new RuntimeException("Error Mono"));
+		Mono<String> learn = Mono.just("Learn Code")
+				.log()
+				.then(errorMono);//creates mono of String type since we passed String
+
+//		learn.subscribe(data->{
+//			System.out.println("data is "+ data);
+//		});
+		learn.subscribe(System.out::println);
+		//errorMono.subscribe(System.out::println);
 	}
 
 }
