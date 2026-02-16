@@ -45,11 +45,11 @@ class ReactiveProjectApplicationTests {
 	void workingWithMonoUsingConsumer(){
 //		Mono ----> Publisher that have 0...1 items
 		Mono<String> learn = Mono.just("Learn Code")
-				.log();//creates mono of String type since we passed String
+				.log();//logs all Subscriber activity
 		learn.subscribe(data->{
 			System.out.println("data is "+ data);
 		});
-		learn.subscribe(System.out::println);
+		//learn.subscribe(System.out::println);
 	}
 
 	@Test
@@ -57,13 +57,14 @@ class ReactiveProjectApplicationTests {
 		Mono<String> errorMono = Mono.error(new RuntimeException("Error Mono"));
 		Mono<String> learn = Mono.just("Learn Code")
 				.log()
-				.then(errorMono);//creates mono of String type since we passed String
-
-//		learn.subscribe(data->{
-//			System.out.println("data is "+ data);
-//		});
+				.then(errorMono);//throws the errorMono mono which throws error
 		learn.subscribe(System.out::println);
 		//errorMono.subscribe(System.out::println);
+	}
+
+	@Test
+	void workingWithMonoUsingZip(){
+
 	}
 
 }
