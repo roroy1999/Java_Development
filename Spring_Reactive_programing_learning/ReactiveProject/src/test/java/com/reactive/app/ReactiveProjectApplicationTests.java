@@ -4,10 +4,15 @@ import org.junit.jupiter.api.Test;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import org.springframework.boot.test.context.SpringBootTest;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 import reactor.util.function.Tuple3;
 
+import java.lang.reflect.Array;
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 @SpringBootTest
@@ -110,6 +115,41 @@ class ReactiveProjectApplicationTests {
 		result.subscribe(r ->{
 			System.out.println(r[1]);
 		});
+	}
+
+	@Test
+	void workingWithMonoUsingFlatMapMany() {
+		Mono<String> m1 = Mono.just("Hello Robin");
+
+		Flux<String> result = m1.flatMapMany(item-> Flux.just(item.split(" "))).log();
+		result.subscribe(r ->{
+			System.out.println(r);
+		});
+	}
+
+	@Test
+	void workingWithMonoUsingConcatWith() {
+		Mono<String> m1 = Mono.just("Hello1");
+		Mono<String> m2 = Mono.just("Hello2");
+
+		Flux<String> result = m1.concatWith(m2).log();
+		result.subscribe(System.out::println);
+	}
+
+	@Test
+	void workingWithMonoUsingDelayElement() throws InterruptedException {
+		Mono<String> m1 = Mono.just("Hello1");
+		Mono<String> m2 = Mono.just("Hello2");
+		System.out.println("Starting : " +Thread.currentThread().getName());
+
+		Flux<String> result = m1.concatWith(m2).log().delayElements(Duration.ofMillis(2000));
+		result.subscribe(data->{
+			System.out.println("Subscriber : " +Thread.currentThread().getName());
+			System.out.println("Data : "+ data);
+		});
+
+		Thread.sleep(10000);
+		System.out.println("ending : " +Thread.currentThread().getName());
 	}
 
 }
