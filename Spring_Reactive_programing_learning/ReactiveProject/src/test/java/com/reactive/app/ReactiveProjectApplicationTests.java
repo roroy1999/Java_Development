@@ -5,6 +5,10 @@ import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Mono;
+import reactor.util.function.Tuple2;
+import reactor.util.function.Tuple3;
+
+import java.util.Locale;
 
 @SpringBootTest
 class ReactiveProjectApplicationTests {
@@ -64,7 +68,48 @@ class ReactiveProjectApplicationTests {
 
 	@Test
 	void workingWithMonoUsingZip(){
+		Mono<String> m1 = Mono.just("Hello1");
+		Mono<String> m2 = Mono.just("Hello2");
+		Mono<Integer> m3 = Mono.just(3);
 
+		//Mono<Tuple2<String,String>> comb = Mono.zip(m1,m2).log();
+		Mono<Tuple3<String,String,Integer>> comb = Mono.zip(m1,m2,m3).log();
+		//comb.subscribe(System.out::println);
+		comb.subscribe(data->{
+			System.out.println(data.getT1());
+			System.out.println(data.getT2());
+			System.out.println(data.getT3());
+		});
+	}
+
+	@Test
+	void workingWithMonoUsingZipWith() {
+		Mono<String> m1 = Mono.just("Hello1");
+		Mono<String> m2 = Mono.just("Hello2");
+
+		Mono<Tuple2<String, String>> comb = m1.zipWith(m2).log();
+		comb.subscribe(data -> {
+			System.out.println(data.getT1());
+			System.out.println(data.getT2());
+		});
+	}
+
+	@Test
+	void workingWithMonoUsingMap() {
+		Mono<String> m1 = Mono.just("Hello1");
+
+		Mono<String> result = m1.map(item-> item.toUpperCase()).log();
+		result.subscribe(System.out::println);
+	}
+
+	@Test
+	void workingWithMonoUsingFlatMap() {
+		Mono<String> m1 = Mono.just("Hello Robin");
+
+		Mono<String[]> result = m1.flatMap(item-> Mono.just(item.split(" "))).log();
+		result.subscribe(r ->{
+			System.out.println(r[1]);
+		});
 	}
 
 }
