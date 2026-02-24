@@ -41,6 +41,13 @@ public class FluxTest {
         });
     }
 
+    @Test
+    public void fluxMapTest(){
+        this.fluxLearnService.MapExampleFlux().subscribe(data->{
+            System.out.println(data);
+        });
+    }
+
 
 
 }

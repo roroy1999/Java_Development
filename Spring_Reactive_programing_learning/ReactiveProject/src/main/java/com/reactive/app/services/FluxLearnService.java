@@ -16,4 +16,16 @@ public class FluxLearnService {
         List<String> fruit = List.of("Apple","Bannana");
         return Flux.fromIterable(fruit);
     }
+
+    public Flux<Void> getBlankFlux(){
+        return Flux.empty();
+    }
+
+    public Flux<String> MapExampleFlux(){
+
+        Flux<String> cap = Flux.just("Robin","Roy").map((data)->{
+            return data.toUpperCase();
+        });
+        return cap;
+    }
 }
