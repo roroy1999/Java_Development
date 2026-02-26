@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
 import reactor.util.function.Tuple2;
 import reactor.util.function.Tuple3;
 
@@ -48,6 +49,29 @@ public class FluxTest {
         });
     }
 
+    @Test
+    public void StepVerifierTest(){
+        Flux<String> capFlux =this.fluxLearnService.MapExampleFlux();
+        StepVerifier.create(capFlux)
+                .expectNextCount(2)
+                .verifyComplete();
+    }
 
+    @Test
+    public void expectNextTest(){
+        Flux<String> capFlux =this.fluxLearnService.MapExampleFlux();
+        StepVerifier.create(capFlux)
+                .expectNext("ROBIN","ROY")
+                .verifyComplete();
+    }
+
+    @Test
+    public void filterTest(){
+        Flux<String> capFlux = this.fluxLearnService.MapExampleFlux().filter(data->data.length()>4);
+        StepVerifier.create(capFlux)
+                .expectNext("ROBIN")
+                .verifyComplete();
+
+    }
 
 }
