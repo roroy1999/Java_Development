@@ -28,4 +28,8 @@ public class FluxLearnService {
         });
         return cap;
     }
+
+    public Flux<String> FlatMapExampleFlux(){
+        return Flux.just("Robin","Roy").flatMap(name-> Flux.just(name.split("")));
+    }
 }

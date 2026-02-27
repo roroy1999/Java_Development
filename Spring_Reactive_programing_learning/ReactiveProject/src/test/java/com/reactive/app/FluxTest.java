@@ -71,7 +71,14 @@ public class FluxTest {
         StepVerifier.create(capFlux)
                 .expectNext("ROBIN")
                 .verifyComplete();
-
     }
 
+    @Test
+    void flatMapExampleFlux() {
+
+        Flux<String> stringFlux = fluxLearnService.FlatMapExampleFlux().log();
+        StepVerifier.create(stringFlux)
+                .expectNextCount(8)
+                .verifyComplete();
+    }
 }
