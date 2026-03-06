@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 import java.util.List;
+import java.util.function.Function;
 
 @Service
 public class FluxLearnService {
@@ -31,5 +32,18 @@ public class FluxLearnService {
 
     public Flux<String> FlatMapExampleFlux(){
         return Flux.just("Robin","Roy").flatMap(name-> Flux.just(name.split("")));
+    }
+
+    public Flux FluxTransfromExample(){
+        Function<Flux<String>,Flux<String>> finInterface = (data)->{
+            return data.filter(x->x.length()>3);
+        };
+        return Flux.just("Robin","Roy").transform(finInterface).log();
+    }
+
+    public Flux<String> ifExample(int length){
+        return Flux.just("Robin","Roy","Rohan")
+                .filter(x-> x.length()> length )
+                .defaultIfEmpty("Shanker").log();
     }
 }

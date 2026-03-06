@@ -81,4 +81,20 @@ public class FluxTest {
                 .expectNextCount(8)
                 .verifyComplete();
     }
+
+    @Test
+    void TransformExample() {
+        Flux<String> stringFlux = fluxLearnService.FluxTransfromExample();
+        StepVerifier.create(stringFlux)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+
+    @Test
+    void ifExample() {
+        Flux<String> stringFlux = fluxLearnService.ifExample(8);
+        StepVerifier.create(stringFlux)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
 }
