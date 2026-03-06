@@ -97,4 +97,28 @@ public class FluxTest {
                 .expectNextCount(1)
                 .verifyComplete();
     }
+
+    @Test
+    void switchIfEmptyExample() {
+        Flux<String> stringFlux = fluxLearnService.switchIfEmptyExample(8);
+        StepVerifier.create(stringFlux)
+                .expectNext("Tarzen")
+                .verifyComplete();
+    }
+
+    @Test
+    void concatExample() {
+        Flux<String> stringFlux = fluxLearnService.concatExample();
+        StepVerifier.create(stringFlux)
+                .expectNextCount(5)
+                .verifyComplete();
+    }
+
+    @Test
+    void mergeExample() {
+        Flux<String> stringFlux = fluxLearnService.mergeExample();
+        StepVerifier.create(stringFlux)
+                .expectNextCount(5)
+                .verifyComplete();
+    }
 }

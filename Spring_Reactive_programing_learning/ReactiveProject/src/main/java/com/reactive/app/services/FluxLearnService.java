@@ -3,6 +3,7 @@ package com.reactive.app.services;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.function.Function;
 
@@ -45,5 +46,23 @@ public class FluxLearnService {
         return Flux.just("Robin","Roy","Rohan")
                 .filter(x-> x.length()> length )
                 .defaultIfEmpty("Shanker").log();
+    }
+
+    public Flux<String> switchIfEmptyExample(int length){
+        return Flux.just("Robin","Roy","Rohan")
+                .filter(x-> x.length()> length )
+                .switchIfEmpty(Flux.just("Tarzen")).log();
+    }
+
+    public Flux<String> concatExample(){
+        return Flux.concat(getFlux(),fruitsFlux()).log();
+    }
+
+    public Flux<String> concatWithExample(){
+        return getFlux().concatWith(fruitsFlux()).log();
+    }
+
+    public Flux<String> mergeExample(){
+        return Flux.merge(getFlux().delayElements(Duration.ofSeconds(1)),fruitsFlux().delayElements(Duration.ofSeconds(1))).log();
     }
 }
