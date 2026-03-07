@@ -121,4 +121,25 @@ public class FluxTest {
                 .expectNextCount(5)
                 .verifyComplete();
     }
+
+    @Test
+    void zipExample() {
+        StepVerifier.create(fluxLearnService.ZipExample())
+                .expectNextCount(2)
+                .verifyComplete();
+    }
+
+    @Test
+    void zipTransformExample() {
+        StepVerifier.create(fluxLearnService.ZipTransformExample())
+                .expectNextCount(2)
+                .verifyComplete();
+    }
+
+    @Test
+    void sideEffectExample() {
+        StepVerifier.create(fluxLearnService.sideEffectExample())
+                .expectNextCount(4)
+                .verifyComplete();
+    }
 }
