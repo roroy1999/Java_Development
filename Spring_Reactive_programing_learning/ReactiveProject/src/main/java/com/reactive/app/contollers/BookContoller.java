@@ -3,9 +3,12 @@ package com.reactive.app.contollers;
 import com.reactive.app.entities.Book;
 import com.reactive.app.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.time.Duration;
 
 @RestController
 @RequestMapping("/books")
@@ -19,9 +22,9 @@ public class BookContoller {
         return bookService.create(book);
     }
 
-    @GetMapping
+    @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Book> read(){
-        return bookService.getAll();
+        return bookService.getAll().delayElements(Duration.ofSeconds(2)).log();
     }
 
     @GetMapping("/{bookId}")
