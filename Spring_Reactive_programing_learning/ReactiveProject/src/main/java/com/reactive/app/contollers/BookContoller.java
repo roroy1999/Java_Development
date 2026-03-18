@@ -46,4 +46,9 @@ public class BookContoller {
     public Mono<Void> delete(@PathVariable int bookId){
         return bookService.delete(bookId);
     }
+
+    @GetMapping(path = "/search")
+    public Flux<Book> Search(@RequestParam String query){
+        return bookService.search("%"+query+"%");
+    }
 }
